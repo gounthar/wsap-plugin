@@ -11,7 +11,7 @@ import lombok.Setter;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -109,7 +109,7 @@ public class LoginProperties extends Entry implements ConsoleSupport {
         }
 
         @Override
-        public boolean configure(StaplerRequest req, net.sf.json.JSONObject json) throws FormException {
+        public boolean configure(StaplerRequest2 req, net.sf.json.JSONObject json) throws FormException {
             save();
             return super.configure(req, json);
         }

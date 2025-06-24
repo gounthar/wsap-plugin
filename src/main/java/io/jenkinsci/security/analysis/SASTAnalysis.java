@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 public class SASTAnalysis extends Entry implements ConsoleSupport {
     @Getter @Setter private String target;
@@ -39,7 +39,7 @@ public class SASTAnalysis extends Entry implements ConsoleSupport {
         }
 
         @Override
-        public boolean configure(StaplerRequest req, JSONObject json) throws FormException {
+        public boolean configure(StaplerRequest2 req, JSONObject json) throws FormException {
             save();
             return super.configure( req, json );
         }

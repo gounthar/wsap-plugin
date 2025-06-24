@@ -10,7 +10,7 @@ import lombok.Setter;
 import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -83,7 +83,7 @@ public class ScanMethod extends Entry implements ConsoleSupport {
         }
 
         @Override
-        public boolean configure(StaplerRequest req, JSONObject json) throws FormException {
+        public boolean configure(StaplerRequest2 req, JSONObject json) throws FormException {
             save();
             return super.configure( req, json );
         }
